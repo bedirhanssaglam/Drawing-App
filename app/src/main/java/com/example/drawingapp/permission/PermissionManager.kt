@@ -38,8 +38,8 @@ class PermissionManager(private val activity: AppCompatActivity, private val act
     private val requestPermission: ActivityResultLauncher<Array<String>> =
         activity.registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permissions ->
             permissions.entries.forEach {
-                val permissionName = it.key
-                val isGranted = it.value
+                val permissionName: String = it.key
+                val isGranted: Boolean = it.value
 
                 if (isGranted) {
                     Toast.makeText(activity, Constants.STORAGE_PERMISSION_GRANTED_MESSAGE, Toast.LENGTH_SHORT).show()

@@ -19,8 +19,7 @@ class DrawingView(context: Context, attrs: AttributeSet) : View(context, attrs) 
     private var drawPaint: Paint? = null
     private var canvasPaint: Paint? = null
 
-    // Not private for the tests.
-    var brushSize: Float = 0f
+    private var brushSize: Float = 0f
     private var color = Color.BLACK
     private var canvas: Canvas? = null
     private val paths = ArrayList<CustomPath>()
